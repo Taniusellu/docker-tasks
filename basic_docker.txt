@@ -1,0 +1,29 @@
+"To check the version of you docker"
+      sudo docker version
+
+"Run - start a container"
+        docker run nginx
+
+"ps - list all running containers and some basic information(name,id,port of your container"
+        docker ps
+
+"list all running containers and which are not running "
+        ps -a
+
+"To stop running a container"
+        docker stop NameOfContainer
+
+"Remove a container permanently"
+        docker rm NameOfContainer
+
+
+How to see our images?
+
+"To see the list of available images "
+        docker images
+
+"To remove images "
+        docker rmi NameOfImage
+"Execute a command"
+     "To see the content of the hosts file"
+     docker exec NameOfContainer car /etc/hosts
