@@ -1,0 +1,33 @@
+1) How many containers are running on this host?
+	docker ps
+
+2)How many images are available on this host?
+	docker image
+
+3)What is the image used to run the nginx-1 container?
+	docker ps     (check under IMAGE column)
+
+4)What is the ID of the container that uses the alpine image and is not running?
+	docker ps -a 
+
+5)What is the state of the stopped alpine container?
+	docker ps -a      (look at the STATUS column)
+
+6) Delete all containers from the Docker Host
+Both Running and Not Running ones. Remember you may have to stop containers before deleting them.
+	docker ps -q  (to show the id of all your containers)
+	docker ps -q &(docker ps -q)  (to delete all containers using the ID)
+
+7)Delete ubuntu image 
+	docker rmi ubuntu
+
+8)You are required to pull a docker image which will be used to run a container later. Pull the image nginx:1.14-alpine
+Only pull the image, do not create a container.
+	docker pull nginx:1.14-alpine
+
+9)Cleanup: Delete all images on the host
+             docker rmi images 
+
+10)Run a container with the nginx:1.14-alpine image and name it webapp
+	docker run --name webapp nginx:1.14-alpine
+
